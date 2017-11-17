@@ -18,12 +18,13 @@ module.exports = function Gcm(app, conf) {
       contentAvailable = true,
       tokens = [],
       data = {},
+      payload = {},
       message: title,
       sound = 'beep.wav',
       retries = 0,
     } = opts;
 
-    Object.assign(data, { title, sound });
+    Object.assign(data, { title, sound, payload });
 
     const gcmMessage = new gcm.Message({ priority, contentAvailable, data });
 

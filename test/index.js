@@ -53,6 +53,7 @@ const sendOkMethod = () => (
         body: 'test body',
         title: 'test title',
         sound: 'mySound.aiff',
+        payload: {},
       },
     });
 
