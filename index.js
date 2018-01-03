@@ -2,7 +2,7 @@ const gcm = require('node-gcm');
 const log = require('debug')('r2:gcm');
 
 module.exports = function Gcm(app, conf) {
-  const getConf = conf || app.config('apn');
+  const getConf = conf || app.config('gcm');
   if (!getConf) {
     return log('gcm config not found!');
   }
